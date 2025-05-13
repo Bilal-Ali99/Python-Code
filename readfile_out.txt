@@ -1,0 +1,4 @@
+wordcount:4 Ami: Bilal Khana Khaya
+wordcount:5 Bilal: nai abi nai khaya
+wordcount:4 Ami: kb khaogy phir
+wordcount:5 Bilal: raat ko ghr akar
