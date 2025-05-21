@@ -14,16 +14,20 @@ process are heavy weight
 the benefit of multiprocessing is that the error or memomy leak in one process won't hurt hurt execution of another process meaning if one process is problematic it wont effect other process but if one thread is problematic it create hinderance for other threads too"""
 
 
-
+import time
 import multiprocessing
+
+# square_result= []
 
 def cal_sqr(numbers):
     for i in numbers:
+        time.sleep(3)
         print("square is " + str(i*i))
 
 
 def cal_cube(numbers):
     for i in numbers:
+        time.sleep(3)
         print("cube is " +  str(i*i*i))
 
 
@@ -37,3 +41,22 @@ if __name__ == "__main__":
     p1.join()
     p2.join()
     print("Done")
+
+
+"""
+taking the example of printing the results of anyone process for example p1
+
+then we will need to print it in the function where we are calculating the square of the numbers
+taking the example
+
+def cal_sqr(numbers):
+    global square_result
+    for i in numbers:
+        print("square is " + str(i*i))
+        square_result.append(i*i)
+    print('result of calculation within the process' + str(square_result))
+
+
+    
+
+"""
